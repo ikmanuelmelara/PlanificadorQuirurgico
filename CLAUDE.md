@@ -124,15 +124,20 @@ Si `MONGODB_URI` no está definida, el servidor arranca pero sin conexión a BD.
 
 ## Próximos Pasos
 
-### Iteración 2 — Modelos de datos (en progreso)
+### Iteración 2 — Modelos de datos (completada)
 
 - [x] SurgicalService.js — Servicios quirúrgicos con especialidades, duraciones medias por prioridad, quirófanos permitidos
 - [x] OperatingRoom.js — Quirófanos con equipamiento, servicios permitidos, disponibilidad semanal
 - [x] Session.js — Sesiones (M/T/C) con auto-cálculo de horarios, índice único room+date+type
 - [x] WaitingList.js — LEQ con prioridades CatSalut, auto-cálculo de garantía y días en espera
 - [x] LearnedConstraint.js — Restricciones explícitas/descubiertas con métricas de calidad
-- [ ] Modelos Mongoose: HistoricalActivity, EmergencyRecord, ReferralRecord, DropoutRecord
-- [ ] Modelos FHIR: Patient, ServiceRequest, Schedule
+- [x] HistoricalActivity.js — Actividad quirúrgica histórica con duraciones planificadas vs reales
+- [x] EmergencyRecord.js — Urgencias inmediatas/diferidas con desplazamiento de sesiones
+- [x] ReferralRecord.js — Derivaciones a centros externos con motivos y seguimiento
+- [x] DropoutRecord.js — Bajas de LEQ con motivos CatSalut y snapshot de estado
+- [x] FHIR Patient.js — Recurso FHIR R4 Patient simplificado
+- [x] FHIR ServiceRequest.js — Solicitud quirúrgica con mapeo prioridad FHIR/CatSalut
+- [x] FHIR Schedule.js — Calendario FHIR con horizonte de planificación y sesiones
 
 ### Iteración 3 — Generación de datos sintéticos
 
