@@ -1,0 +1,30 @@
+import { Routes, Route } from 'react-router-dom';
+import MainLayout from './components/Layout/MainLayout';
+import MainDashboard from './components/Dashboard/MainDashboard';
+
+// Placeholder pages for future iterations
+function PlaceholderPage({ title }) {
+  return (
+    <div className="flex items-center justify-center h-64">
+      <div className="text-center">
+        <h2 className="text-2xl font-semibold text-gray-700">{title}</h2>
+        <p className="mt-2 text-gray-500">Disponible en próximas iteraciones</p>
+      </div>
+    </div>
+  );
+}
+
+export default function App() {
+  return (
+    <Routes>
+      <Route element={<MainLayout />}>
+        <Route path="/" element={<MainDashboard />} />
+        <Route path="/datos" element={<PlaceholderPage title="Gestión de Datos" />} />
+        <Route path="/prediccion" element={<PlaceholderPage title="Módulo Predictivo" />} />
+        <Route path="/restricciones" element={<PlaceholderPage title="Restricciones Aprendidas" />} />
+        <Route path="/optimizacion" element={<PlaceholderPage title="Optimización" />} />
+        <Route path="/planilla" element={<PlaceholderPage title="Planilla Óptima" />} />
+      </Route>
+    </Routes>
+  );
+}
