@@ -124,12 +124,15 @@ Si `MONGODB_URI` no está definida, el servidor arranca pero sin conexión a BD.
 
 ## Próximos Pasos
 
-### Iteración 2 — Modelos de datos
+### Iteración 2 — Modelos de datos (en progreso)
 
-- [ ] Modelos Mongoose: SurgicalService, OperatingRoom, Session, WaitingList
+- [x] SurgicalService.js — Servicios quirúrgicos con especialidades, duraciones medias por prioridad, quirófanos permitidos
+- [x] OperatingRoom.js — Quirófanos con equipamiento, servicios permitidos, disponibilidad semanal
+- [x] Session.js — Sesiones (M/T/C) con auto-cálculo de horarios, índice único room+date+type
+- [x] WaitingList.js — LEQ con prioridades CatSalut, auto-cálculo de garantía y días en espera
+- [x] LearnedConstraint.js — Restricciones explícitas/descubiertas con métricas de calidad
 - [ ] Modelos Mongoose: HistoricalActivity, EmergencyRecord, ReferralRecord, DropoutRecord
 - [ ] Modelos FHIR: Patient, ServiceRequest, Schedule
-- [ ] Modelo LearnedConstraint
 
 ### Iteración 3 — Generación de datos sintéticos
 
