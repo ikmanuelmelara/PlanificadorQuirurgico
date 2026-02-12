@@ -139,11 +139,13 @@ Si `MONGODB_URI` no está definida, el servidor arranca pero sin conexión a BD.
 - [x] FHIR ServiceRequest.js — Solicitud quirúrgica con mapeo prioridad FHIR/CatSalut
 - [x] FHIR Schedule.js — Calendario FHIR con horizonte de planificación y sesiones
 
-### Iteración 3 — Generación de datos sintéticos
+### Iteración 3 — Generación de datos sintéticos (completada)
 
-- [ ] Servicio de generación de datos sintéticos
-- [ ] Configuración de volúmenes y distribuciones
-- [ ] Rutas API para generación, descarga y subida de ficheros
+- [x] configPresets.js — Volúmenes por defecto, distribuciones CatSalut, catálogo servicios/quirófanos/procedimientos
+- [x] waitingListGenerator.js — Genera pacientes sintéticos con distribución exponencial, FHIR Patient + ServiceRequest
+- [x] syntheticDataGenerator.js — Orquestador: generateAll, seedServicesAndRooms, histórico, urgencias, derivaciones, bajas, sesiones
+- [x] data.routes.js — POST /generate, GET /waiting-list, GET /statistics, GET /export/:type, POST /import/:type
+- [x] index.js actualizado con rutas de datos
 
 ### Iteración 4 — Frontend base
 
