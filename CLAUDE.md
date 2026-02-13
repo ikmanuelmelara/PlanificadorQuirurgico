@@ -160,10 +160,17 @@ Si `MONGODB_URI` no está definida, el servidor arranca pero sin conexión a BD.
 - [x] FileDownloader: descarga por tipo de dataset
 - [x] services/api.js: capa Axios centralizada
 
-### Iteración 5 — Módulo predictivo
+### Iteración 5 — Módulo predictivo (completada)
 
-- [ ] Predictor de demanda, urgencias, derivaciones y bajas
-- [ ] Panel de predicciones en frontend
+- [x] demandPredictor.js: tasa histórica por servicio con estacionalidad
+- [x] emergencyPredictor.js: urgencias diferidas/inmediatas por servicio
+- [x] referralPredictor.js: derivaciones por servicio y motivo
+- [x] dropoutPredictor.js: bajas por servicio y motivo
+- [x] predictionOrchestrator.js: orquesta predictores, persiste resultados en BD
+- [x] prediction.routes.js: POST /run, GET /latest, GET /history
+- [x] PredictionPanel.jsx: selector de módulos, ejecutar/cargar predicción
+- [x] PredictionResults.jsx: cards, tabla por servicio, bar chart agrupado, pie charts
+- [x] api.js actualizado con runPrediction, getLatestPrediction, getPredictionHistory
 
 ### Iteración 6 — Aprendizaje de restricciones
 
