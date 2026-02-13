@@ -172,11 +172,19 @@ Si `MONGODB_URI` no está definida, el servidor arranca pero sin conexión a BD.
 - [x] PredictionResults.jsx: cards, tabla por servicio, bar chart agrupado, pie charts
 - [x] api.js actualizado con runPrediction, getLatestPrediction, getPredictionHistory
 
-### Iteración 6 — Aprendizaje de restricciones
+### Iteración 6 — Aprendizaje de restricciones (completada)
 
-- [ ] Association rules mining
-- [ ] Clustering, decision trees, anomaly detection
-- [ ] Dashboard de restricciones descubiertas
+- [x] associationRulesMiner.js: Apriori simplificado con soporte, confianza, lift
+- [x] patternClusterer.js: K-Means con detección de outliers por distancia
+- [x] decisionTreeBuilder.js: ID3 con extracción de reglas IF-THEN e importancia de features
+- [x] anomalyDetector.js: detección por ausencia, combinaciones raras, outliers de duración
+- [x] constraintLearner.js: orquestador que clasifica en explícitas/descubiertas y persiste en LearnedConstraint
+- [x] learning.routes.js: POST /run, GET /constraints, PUT /constraints/:id/validate, GET /summary
+- [x] ConstraintsDashboard.jsx: botón aprender, resumen, tabs (todas/explícitas/descubiertas/validadas/pendientes)
+- [x] ConstraintsList.jsx: tabla con filtros, acciones validar/rechazar, paginación
+- [x] ConstraintDetail.jsx: modal con regla JSON formateada, métricas, botones validar/rechazar
+- [x] DiscoveryMethodsChart.jsx: pie chart por método, bar chart por categoría
+- [x] api.js actualizado con runLearning, getConstraints, validateConstraint, getLearningSummary
 
 ### Iteración 7 — Módulo prescriptivo
 
