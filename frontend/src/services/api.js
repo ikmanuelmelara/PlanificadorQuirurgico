@@ -30,6 +30,19 @@ export function importData(type, data, replace = false) {
   return api.post(`/data/import/${type}`, { data, replace }).then((r) => r.data);
 }
 
+// --- Predictions ---
+export function runPrediction(cutoffDate, include = {}) {
+  return api.post('/prediction/run', { cutoffDate, include }).then((r) => r.data);
+}
+
+export function getLatestPrediction() {
+  return api.get('/prediction/latest').then((r) => r.data);
+}
+
+export function getPredictionHistory(params = {}) {
+  return api.get('/prediction/history', { params }).then((r) => r.data);
+}
+
 // --- Health ---
 export function getHealth() {
   return api.get('/health').then((r) => r.data);
