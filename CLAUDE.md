@@ -147,14 +147,18 @@ Si `MONGODB_URI` no está definida, el servidor arranca pero sin conexión a BD.
 - [x] data.routes.js — POST /generate, GET /waiting-list, GET /statistics, GET /export/:type, POST /import/:type
 - [x] index.js actualizado con rutas de datos
 
-### Iteración 4 — Frontend base (parcial)
+### Iteración 4 — Frontend base (completada)
 
 - [x] Setup React 18 + Vite + Tailwind CSS + React Router + Axios + Recharts
 - [x] Layout: Sidebar con navegación activa, Header con selector de fecha de corte, MainLayout wrapper
 - [x] Dashboard principal con métricas del sistema (conectado a /api/health y /api/data/statistics)
 - [x] Rutas: /, /datos, /prediccion, /restricciones, /optimizacion, /planilla
-- [ ] Cuadro de mando de gestión de datos
-- [ ] Visualizadores de datasets
+- [x] Cuadro de mando de gestión de datos (DataDashboard con tabs: Generar, LEQ, Descargar, Subir)
+- [x] VolumeConfigurator: sliders + distribución prioridad con validación 100%
+- [x] WaitingListViewer: tabla paginada con filtros, gráficos Recharts por prioridad/servicio
+- [x] FileUploader: drag & drop con validación JSON, selección de tipo y replace
+- [x] FileDownloader: descarga por tipo de dataset
+- [x] services/api.js: capa Axios centralizada
 
 ### Iteración 5 — Módulo predictivo
 

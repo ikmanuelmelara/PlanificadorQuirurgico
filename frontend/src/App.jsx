@@ -1,6 +1,7 @@
 import { Routes, Route } from 'react-router-dom';
 import MainLayout from './components/Layout/MainLayout';
 import MainDashboard from './components/Dashboard/MainDashboard';
+import DataDashboard from './components/DataManagement/DataDashboard';
 
 // Placeholder pages for future iterations
 function PlaceholderPage({ title }) {
@@ -19,7 +20,7 @@ export default function App() {
     <Routes>
       <Route element={<MainLayout />}>
         <Route path="/" element={<MainDashboard />} />
-        <Route path="/datos" element={<PlaceholderPage title="Gestión de Datos" />} />
+        <Route path="/datos" element={<DataDashboard />} />
         <Route path="/prediccion" element={<PlaceholderPage title="Módulo Predictivo" />} />
         <Route path="/restricciones" element={<PlaceholderPage title="Restricciones Aprendidas" />} />
         <Route path="/optimizacion" element={<PlaceholderPage title="Optimización" />} />
