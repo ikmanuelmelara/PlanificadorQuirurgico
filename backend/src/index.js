@@ -15,8 +15,10 @@ app.use(express.json({ limit: '50mb' }));
 // Routes
 const dataRoutes = require('./routes/data.routes');
 const predictionRoutes = require('./routes/prediction.routes');
+const learningRoutes = require('./routes/learning.routes');
 app.use('/api/data', dataRoutes);
 app.use('/api/prediction', predictionRoutes);
+app.use('/api/learning', learningRoutes);
 
 // Health check
 app.get('/api/health', async (req, res) => {

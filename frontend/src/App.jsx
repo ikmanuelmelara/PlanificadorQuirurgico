@@ -3,6 +3,7 @@ import MainLayout from './components/Layout/MainLayout';
 import MainDashboard from './components/Dashboard/MainDashboard';
 import DataDashboard from './components/DataManagement/DataDashboard';
 import PredictionPanel from './components/Prediction/PredictionPanel';
+import ConstraintsDashboard from './components/Constraints/ConstraintsDashboard';
 
 // Placeholder pages for future iterations
 function PlaceholderPage({ title }) {
@@ -23,7 +24,7 @@ export default function App() {
         <Route path="/" element={<MainDashboard />} />
         <Route path="/datos" element={<DataDashboard />} />
         <Route path="/prediccion" element={<PredictionPanel />} />
-        <Route path="/restricciones" element={<PlaceholderPage title="Restricciones Aprendidas" />} />
+        <Route path="/restricciones" element={<ConstraintsDashboard />} />
         <Route path="/optimizacion" element={<PlaceholderPage title="Optimización" />} />
         <Route path="/planilla" element={<PlaceholderPage title="Planilla Óptima" />} />
       </Route>

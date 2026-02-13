@@ -43,6 +43,23 @@ export function getPredictionHistory(params = {}) {
   return api.get('/prediction/history', { params }).then((r) => r.data);
 }
 
+// --- Learning / Constraints ---
+export function runLearning(options = {}) {
+  return api.post('/learning/run', options).then((r) => r.data);
+}
+
+export function getConstraints(params = {}) {
+  return api.get('/learning/constraints', { params }).then((r) => r.data);
+}
+
+export function validateConstraint(id, isValid) {
+  return api.put(`/learning/constraints/${id}/validate`, { isValid }).then((r) => r.data);
+}
+
+export function getLearningSummary() {
+  return api.get('/learning/summary').then((r) => r.data);
+}
+
 // --- Health ---
 export function getHealth() {
   return api.get('/health').then((r) => r.data);
