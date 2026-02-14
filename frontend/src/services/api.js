@@ -60,6 +60,23 @@ export function getLearningSummary() {
   return api.get('/learning/summary').then((r) => r.data);
 }
 
+// --- Optimization ---
+export function getCriteria() {
+  return api.get('/optimization/criteria').then((r) => r.data);
+}
+
+export function runOptimization(config) {
+  return api.post('/optimization/run', config).then((r) => r.data);
+}
+
+export function getLatestOptimization() {
+  return api.get('/optimization/latest').then((r) => r.data);
+}
+
+export function getOptimizationHistory(params = {}) {
+  return api.get('/optimization/history', { params }).then((r) => r.data);
+}
+
 // --- Health ---
 export function getHealth() {
   return api.get('/health').then((r) => r.data);
